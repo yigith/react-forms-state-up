@@ -1,0 +1,18 @@
+.KayitFormu {
+    border: 1px solid gray;
+    border-radius: .5rem;
+    padding: .75rem;
+}
+
+.KayitFormu > h2 {
+    margin-top: 0;
+}
+
+.KayitFormu > form > div {
+    margin-bottom: .5rem;
+}
+
+.KayitFormu > form > div > label {
+    display: inline-block;
+    width: 75px;
+}

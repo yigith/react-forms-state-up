@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import KayitFormu from './KayitFormu';
+import SayiliButonlar from './SayiliButonlar';
+import Sepet from './Sepet';
 
 function App() {
+  const [sonUye, setSonUye] = useState("-");
+
+  const kayitVar = function(ad, soyad) {
+    setSonUye(ad + " " + soyad);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>Formlarla Çalışma</h1>
+        <SayiliButonlar />
+        <Sepet />
+        <p>En Son Üyemiz: {sonUye}</p>
+        <KayitFormu kaydedildiginde={kayitVar} />
     </div>
   );
 }
